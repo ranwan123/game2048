@@ -13,7 +13,7 @@ source.include_exts = py,png,jpg,kv,atlas
 version = 1.0
 
 # 需要的依赖
-requirements = python3,pygame,kivy
+requirements = python3,kivy
 
 # Android 特定设置
 android.permissions = INTERNET
@@ -27,14 +27,11 @@ android.accept_sdk_license = True
 orientation = portrait
 
 # 图标设置
-#icon.filename = %(source.dir)s/icon.png
-
-# 不需要的权限
-android.permissions = INTERNET
+icon.filename = %(source.dir)s/icon.png
 
 # 应用描述
 description = A 2048 puzzle game
 
 # 作者信息
 author = Your Name
-author_email = your.email@example.com 
+author_email = your.email@example.com
