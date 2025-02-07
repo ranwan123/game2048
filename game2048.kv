@@ -1,0 +1,48 @@
+#:kivy 2.0.0
+
+<Tile>:
+    canvas:
+        Color:
+            rgb: 0.9, 0.9, 0.9 if self.value <= 4 else 1, 1, 1
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [10,]
+    Label:
+        pos: root.pos
+        size: root.size
+        text: str(root.value)
+        font_size: '20sp'
+        color: (0.47, 0.43, 0.40) if root.value <= 4 else (1, 1, 1)
+
+<GameBoard>:
+    canvas.before:
+        Color:
+            rgb: 0.80, 0.76, 0.71
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [10,]
+    padding: '10dp'
+    spacing: '10dp'
+
+<Button>:
+    background_color: 0.66, 0.59, 0.55, 1
+    color: 1, 1, 1, 1
+    size_hint: 1, 1
+    font_size: '18sp'
+
+<Label>:
+    color: 0.47, 0.43, 0.40, 1
+    font_size: '18sp'
+
+BoxLayout:
+    canvas.before:
+        Color:
+            rgb: 0.98, 0.97, 0.94
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    padding: '10dp'
+    spacing: '10dp' 
